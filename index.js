@@ -5,7 +5,10 @@
 */
 
 
-wirds
+let principle = 200000;
+let interestRate = 0.05;
+let years = 30;
+let name = 'robLark';
 
 
 // 🏡 Task 1.5: Simple Math
