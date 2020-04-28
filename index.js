@@ -102,7 +102,7 @@ let N = (years*12);
 let creditScore = (Math.floor(Math.random() * 800))
 
 function mortgageCalculator (P, I, N, creditScore) {
-  console.log(creditScore)
+  
     if (creditScore > 740) {
         I = I-0.5/100
     }else if (creditScore < 660) {
@@ -110,7 +110,7 @@ function mortgageCalculator (P, I, N, creditScore) {
     }else {
         I = I
     }
-    console.log(I)
+   
     let monthlyInterestRate = (I/12);
     let monthlyRate = (P) * ( (monthlyInterestRate) * Math.pow(1 + monthlyInterestRate,N) ) / ( Math.pow(1 + monthlyInterestRate,N) - 1 )
     console.log (`${name}, your monthly rate is ${monthlyRate}`);
