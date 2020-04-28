@@ -5,7 +5,7 @@
 */
 
 
-
+wirds
 
 
 // 🏡 Task 1.5: Simple Math
