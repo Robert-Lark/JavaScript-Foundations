@@ -171,3 +171,32 @@ variableInterestRate (200000, 0.04, 30);
 
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates (make sure to copy and paste as to not lose your work!) */
+
+
+let P = 200000;
+let I = 0.05;
+let years = 30;
+let name = 'Rob Lark';
+let monthlyInterestRate = (I/12);
+let N = (years*12);
+let creditScore = (Math.floor(Math.random() * 800))
+let monthlyPropertyTax = 455;
+let monthlyHomeownersInsurence = 112;
+let hoaFees = 48;
+ 
+
+function mortgageCalculator (P, I, N, creditScore, monthlyPropertyTax, monthlyHomeownersInsurence, hoaFees) {
+  
+    if (creditScore > 740) {
+        I = I-0.5/100
+    }else if (creditScore < 660) {
+        I = I+0.5/100
+    }else {
+        I = I
+    }
+   
+    let monthlyInterestRate = (I/12);
+    let monthlyRate = (P) * ( (monthlyInterestRate) * Math.pow(1 + monthlyInterestRate,N) ) / ( Math.pow(1 + monthlyInterestRate,N) - 1 ) + monthlyPropertyTax + monthlyHomeownersInsurence + hoaFees;
+    console.log (`${name}, your monthly rate is ${monthlyRate}`);
+}
+mortgageCalculator(200000, 0.05, 360, creditScore, monthlyPropertyTax, monthlyHomeownersInsurence, hoaFees);
